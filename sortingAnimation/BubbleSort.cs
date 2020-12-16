@@ -26,16 +26,11 @@ namespace sortingAnimation
                     }
                     break;
                 }
-               
-            }
-
-
-           
-            if (j == array.Length)
-            {
+                if (j == array.Length)
+                    j = 0;
                 
-                j = 0;
             }
+           
         }
 
 
