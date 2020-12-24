@@ -12,16 +12,14 @@ namespace sortingAnimation
     public class BubbleSort
     {
         Form1 form = new Form1();
-
         public const int num_values = 10;
         public static int[] Numbers = new int[num_values];
 
-
         public static Color[] colors = new Color[]
-      {
+        {
             Color.Blue,
-            Color.Red
-      };
+            Color.Red,
+        };
 
         public static void paint(PictureBox label_pic)
         {
@@ -31,15 +29,21 @@ namespace sortingAnimation
                 // Make a label to be the histogram.
                 Label label_hist = new Label();
                 label_hist.Parent = label_pic;
-                if(i< Form1.j)
+                if (i == Form1.j ||
+                    Form1.j + 1 == i &&
+                    i!=Form1.j)
                 {
                     label_hist.BackColor = colors[1];
                 }
+                //else if (Form1.j==num_values)
+                //{
+                //    label_hist.BackColor = colors[0];
+                //}
                 else
                 {
                     label_hist.BackColor = colors[0];
                 }
-                
+
                 label_hist.BorderStyle = BorderStyle.FixedSingle;
                 label_hist.Width = wid;
                 label_hist.Height =
